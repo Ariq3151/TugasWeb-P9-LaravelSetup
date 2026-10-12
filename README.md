@@ -1,82 +1,87 @@
-# TugasWeb-P9-LaravelSetup
+# Tugas Rutin 9 — Setup Laravel
 
-Project ini dibuat untuk memenuhi Tugas Rutin 9 mata kuliah Pemrograman Web.
+## Identitas Proyek
+
+- **Nama Tugas:** Tugas Rutin 9 — Setup Laravel
+- **Repository:** `TugasWeb-P9-LaravelSetup`
+- **Framework:** Laravel
+- **Database:** MySQL
+- **Tools:** PHP, Composer, MySQL/XAMPP, dan Visual Studio Code
+
+## Deskripsi
+
+Proyek ini dibuat untuk memenuhi Tugas Rutin 9 pada mata kuliah Pemrograman Web. Tujuannya adalah memahami proses instalasi Laravel, struktur direktori, konfigurasi database, routing, Blade View, serta konsep dasar Model-View-Controller (MVC).
+
+## Fitur dan Implementasi
+
+- Instalasi proyek menggunakan Composer.
+- Konfigurasi database MySQL melalui file `.env`.
+- Menjalankan aplikasi menggunakan Laravel Artisan.
+- Route `/` untuk halaman utama.
+- Route `/about` untuk halaman About.
+- Route `/contact` untuk halaman Contact.
+- Route `/hello/{nama}` untuk halaman hello.
+- Blade View yang menampilkan data dinamis dari route.
+- Pengenalan pembuatan Controller dan Model beserta migration.
 
 ## Teknologi
 
 - PHP
 - Laravel
-- Composer
 - MySQL
-- phpMyAdmin
-- XAMPP
-- Visual Studio Code
+- Composer
+- Blade Template Engine
 
-## Cara Instalasi
+## Struktur Direktori Laravel
 
-### 1. Clone atau buka project
+- `app/` — Model, Controller, dan kode utama aplikasi.
+- `bootstrap/` — Proses bootstrap aplikasi.
+- `config/` — Konfigurasi aplikasi.
+- `database/` — Migration, factory, dan seeder.
+- `public/` — Entry point dan aset publik.
+- `resources/views/` — File Blade View.
+- `routes/web.php` — Definisi route web.
+- `storage/` — File log dan penyimpanan aplikasi.
+- `tests/` — Pengujian aplikasi.
+- `vendor/` — Dependency Composer yang dipasang secara lokal.
 
-Masuk ke folder project:
+## Persiapan dan Instalasi
 
-C:\xampp\htdocs\TugasWeb-P9-LaravelSetup
+1. Pastikan PHP, Composer, dan MySQL sudah terpasang.
+2. Clone repository ini.
+3. Masuk ke folder proyek.
+4. Jalankan:
 
-### 2. Install dependency
+   ```bash
+   composer install
+   ```
 
-Jalankan:
+5. Salin `.env.example` menjadi `.env`.
+6. Buat database MySQL melalui phpMyAdmin dan sesuaikan nama database pada `.env`.
+7. Buat application key:
 
-composer install
+   ```bash
+   php artisan key:generate
+   ```
 
-### 3. Konfigurasi database
+8. Jalankan migration jika diperlukan:
 
-Buat database MySQL dengan nama:
+   ```bash
+   php artisan migrate
+   ```
 
-tugasweb_p9
+9. Jalankan server:
 
-Kemudian konfigurasi file `.env`:
+   ```bash
+   php artisan serve
+   ```
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=tugasweb_p9
-DB_USERNAME=root
-DB_PASSWORD=
+10. Buka `http://127.0.0.1:8000` pada browser.
 
-### 4. Jalankan migration
+## Catatan
 
-php artisan migrate
+File `.env` tidak disertakan dalam repository. Setiap pengguna perlu membuat konfigurasi `.env` lokal sesuai database masing-masing.
 
-### 5. Jalankan server Laravel
+## Repository
 
-php artisan serve
-
-Aplikasi dapat diakses melalui:
-
-http://127.0.0.1:8000
-
-## Struktur Folder
-
-- `app/Models` → Model aplikasi
-- `app/Http/Controllers` → Controller
-- `database/migrations` → Struktur tabel database
-- `resources/views` → Tampilan Blade
-- `routes/web.php` → Routing aplikasi
-- `.env` → Konfigurasi environment
-- `public` → File publik aplikasi
-
-## Route
-
-- `/` → Halaman Home
-- `/about` → Halaman About
-- `/contact` → Halaman Contact
-
-## Fitur
-
-- Laravel MVC
-- Routing
-- Blade View
-- Controller
-- Model Eloquent
-- Migration
-- Database MySQL
-- Data produk
-- Array dinamis dari Route
+`TugasWeb-P9-LaravelSetup`

@@ -20,7 +20,7 @@ Proyek ini dibuat untuk memenuhi Tugas Rutin 9 pada mata kuliah Pemrograman Web.
 - Route `/` untuk halaman utama.
 - Route `/about` untuk halaman About.
 - Route `/contact` untuk halaman Contact.
-- Route `/hello/{nama}` untuk halaman hello.
+- Route `/hello/{nama}` untuk halaman Hello.
 - Blade View yang menampilkan data dinamis dari route.
 - Pengenalan pembuatan Controller dan Model beserta migration.
 
